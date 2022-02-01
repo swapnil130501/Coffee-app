@@ -1,6 +1,13 @@
+import 'package:coffee_app/models/user.dart';
 import 'package:coffee_app/screens/wrapper.dart';
+import 'package:coffee_app/services/auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:coffee_app/models/user.dart';
+import 'package:coffee_app/services/auth.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,8 +19,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Wrapper(),
+    return StreamProvider<Customer?>.value(
+      catchError: (_, __) => null,
+        initialData: null,
+        value: AuthService().streamUser,
+        child: MaterialApp(
+        home: const Wrapper(),
+        ),
     );
   }
 }

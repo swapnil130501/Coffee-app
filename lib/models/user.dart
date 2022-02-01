@@ -1,5 +1,5 @@
-class CustomClassName{
+class Customer{
   final String uid;
 
-  CustomClassName({required this.uid});
+  Customer({required this.uid});
 }
