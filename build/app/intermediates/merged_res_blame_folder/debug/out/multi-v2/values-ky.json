@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\coffee_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "C:\\Users\\Dedsec\\Documents\\GitHub\\Coffee-app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dedsec\\.gradle\\caches\\transforms-2\\files-2.1\\0fc0d42b2de5430652e4486588074538\\core-1.6.0\\res\\values-ky\\values-ky.xml",

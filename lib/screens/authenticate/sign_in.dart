@@ -2,7 +2,9 @@ import 'package:coffee_app/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class SignIn extends StatefulWidget {
-  const SignIn({Key? key}) : super(key: key);
+
+  final Function toggleView;
+  const SignIn({Key? key, required this.toggleView}) : super(key: key);
 
   @override
   _SignInState createState() => _SignInState();
@@ -23,6 +25,15 @@ class _SignInState extends State<SignIn> {
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
         title: Text('Sign in to brew crew'),
+        actions: [
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('register'),
+            onPressed: () {
+              widget.toggleView();
+            },
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),

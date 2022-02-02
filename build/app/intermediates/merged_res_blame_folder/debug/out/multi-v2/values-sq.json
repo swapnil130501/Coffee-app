@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\coffee_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
+            "outputFile": "C:\\Users\\Dedsec\\Documents\\GitHub\\Coffee-app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dedsec\\.gradle\\caches\\transforms-2\\files-2.1\\169f868ff4a46669c47b19d2adeb7cc6\\jetified-play-services-base-17.1.0\\res\\values-sq\\values.xml",

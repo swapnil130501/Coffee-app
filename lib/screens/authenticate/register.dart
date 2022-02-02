@@ -2,7 +2,9 @@ import 'package:coffee_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+  final Function toggleView;
+
+  const Register({Key? key, required this.toggleView}) : super(key: key);
 
   @override
   _RegisterState createState() => _RegisterState();
@@ -24,6 +26,15 @@ class _RegisterState extends State<Register> {
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
         title: Text('Sign up to brew crew'),
+        actions: [
+          FlatButton.icon(
+            icon: Icon(Icons.person),
+            label: Text('sign in'),
+            onPressed: () {
+              widget.toggleView();
+            },
+          ),
+        ],
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
