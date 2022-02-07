@@ -14,9 +14,9 @@ class _SettingsFormState extends State<SettingsForm> {
   final List<String> sugars = ['0', '1', '2', '3', '4'];
 
   //form values
-  late String _currentName;
-  late String _currentSugars;
-  late int _currentStrength;
+  String _currentName = 'User';
+  String _currentSugars = '0';
+  int _currentStrength = 100;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -47,6 +47,20 @@ class _SettingsFormState extends State<SettingsForm> {
             onChanged: (val) => setState(() => _currentSugars = val!),
           ),
           //slider
+          Slider(
+            value:
+            (_currentStrength ?? _currentStrength).toDouble(),
+            activeColor:
+            Colors.brown[_currentStrength ?? _currentStrength],
+            inactiveColor:
+            Colors.brown[_currentStrength ?? _currentStrength],
+            min: 100,
+            max: 900,
+            divisions: 8,
+            onChanged: (val) =>
+                setState(() => _currentStrength = val.round()),
+          ),
+
           RaisedButton(
             color: Colors.pink[400],
             child: Text(
